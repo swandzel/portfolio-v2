@@ -37,7 +37,7 @@ const About = () => {
   const right = useTransform(
     scrollY,
     [initial, final, 5000],
-    ["-150vw", "0px", "50vw"]
+    ["-180vw", "0px", "30vw"]
   );
 
   return (

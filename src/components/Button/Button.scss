@@ -1,13 +1,19 @@
 @import "../../base";
 
 button {
-  // background-color: $violet;
   border: 3px solid $black;
   text-transform: uppercase;
   @include box-shadow(5px, 5px, 0, 0);
   height: 89px;
-  // width: 294px;
   font-size: 40px;
   font-family: "Oswald Bold", sans-serif;
   cursor: pointer;
+
+  &:hover {
+    border: 5px solid $black;
+    @include box-shadow(0, 0, 0, 0);
+    transform: translate(5px, 5px);
+    // text-decoration: underline;
+    // text-decoration-style: wavy;
+  }
 }
