@@ -6,7 +6,7 @@ import Button from "../Button/Button";
 
 const Contact = () => {
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <div className="contact--content">
         <SectionTitle
           icon={EmailIcon}

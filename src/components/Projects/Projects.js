@@ -7,7 +7,7 @@ import { projects } from "../../variables/projects";
 
 const Projects = () => {
   return (
-    <div className="projects">
+    <div className="projects" id="projects">
       <div className="projects--content">
         <SectionTitle
           icon={ProjectsIcon}

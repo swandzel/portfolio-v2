@@ -5,6 +5,7 @@
   background-color: $yellow;
   display: flex;
   align-items: center;
+  @include scroll-snap;
 
   &--content {
     display: flex;

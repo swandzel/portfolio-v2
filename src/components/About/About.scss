@@ -2,8 +2,9 @@
 
 .about {
   display: flex;
-  @include container;
   padding: 180px 0;
+  @include container;
+  @include scroll-snap;
 
   &--left,
   &--right {
@@ -80,8 +81,11 @@
       align-self: flex-end;
       margin-top: 60px;
 
-      img {
+      a {
         margin-right: 40px;
+      }
+
+      img {
         cursor: pointer;
 
         &:last-of-type {

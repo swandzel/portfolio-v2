@@ -18,7 +18,9 @@ const Navbar = () => {
     <nav className={`navbar ${changeStyle ? "navbar--scroll" : ""}`}>
       <ul>
         {navbar_links.map((navbar_link) => (
-          <li key={navbar_link.id}>{navbar_link.link}</li>
+          <li key={navbar_link.id}>
+            <a href={navbar_link.href}>{navbar_link.link}</a>
+          </li>
         ))}
       </ul>
     </nav>

@@ -20,11 +20,16 @@
     @include container;
 
     li {
+      margin-right: 90px;
+    }
+
+    a {
       font-family: "Oswald Regular", sans-serif;
       text-transform: uppercase;
-      margin-right: 90px;
       font-size: 34px;
       letter-spacing: 4.5px;
+      text-decoration: none;
+      color: $black;
 
       &:hover {
         text-decoration: underline;

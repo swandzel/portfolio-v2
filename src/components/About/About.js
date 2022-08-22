@@ -9,7 +9,7 @@ import { technologies } from "../../variables/technologies";
 
 const About = () => {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <div className="about--left">
         <h2>My skills</h2>
         <div className="about--left--technologies">
@@ -40,7 +40,9 @@ const About = () => {
           </p>
         </div>
         <div className="about--right--icons">
-          <img src={GitHubIcon} alt="Check my GitHub" />
+          <a href="https://github.com/swandzel" target="_blank">
+            <img src={GitHubIcon} alt="Check my GitHub" />
+          </a>
           <img src={ResumeIcon} alt="Download my resume" />
         </div>
       </div>

@@ -4,6 +4,7 @@
   background-color: $pink;
   display: flex;
   padding: 180px 0;
+  @include scroll-snap;
 
   &--content {
     display: flex;
