@@ -1,0 +1,58 @@
+@import "../../base";
+
+.projects-item {
+  display: flex;
+  background-color: $white;
+  height: 495px;
+  border: 10px solid $black;
+  margin-top: 70px !important;
+  @include box-shadow(20px, 20px, 0, 0);
+  @include container;
+
+  &--image {
+    width: 40%;
+    background-color: $violet;
+  }
+
+  &--text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    width: 60%;
+  }
+
+  &--title,
+  &--technologies {
+    font-family: "Roboto Bold", sans-serif;
+    letter-spacing: 2.7px;
+    margin-bottom: 20px;
+  }
+
+  &--title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  &--about,
+  &--technologies--list {
+    font-family: "Roboto Regular", sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    margin-bottom: 40px;
+  }
+
+  &--technologies {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &--buttons {
+    align-self: flex-end;
+
+    button:nth-child(1) {
+      margin-right: 24px;
+    }
+  }
+}

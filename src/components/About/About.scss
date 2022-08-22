@@ -14,9 +14,7 @@
   &--left {
     border: 19px solid $black;
     margin-right: 95px;
-    -webkit-box-shadow: 20px 20px 0px 0px $black;
-    -moz-box-shadow: 20px 20px 0px 0px $black;
-    box-shadow: 20px 20px 0px 0px $black;
+    @include box-shadow(20px, 20px, 0, 0);
     padding: 30px;
 
     h2 {
@@ -31,6 +29,7 @@
     &--technologies {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
       padding-top: 30px;
 
       &-item {
@@ -38,6 +37,8 @@
 
         img:hover + .tooltip {
           display: block;
+          position: absolute;
+          z-index: 5;
         }
       }
     }
@@ -45,19 +46,17 @@
     .tooltip {
       display: none;
       font-size: 36px;
-      line-height: 59px;
-      height: 59px;
+      line-height: 60px;
+      min-height: 60px;
       padding: 0 10px;
-      width: auto;
+      min-width: 100px;
       color: $black;
       background-color: $white;
       position: absolute;
       bottom: -50px;
       left: 50%;
       border: 3px solid $black;
-      -webkit-box-shadow: 5px 5px 0px 0px $yellow;
-      -moz-box-shadow: 5px 5px 0px 0px $yellow;
-      box-shadow: 5px 5px 0px 0px $yellow;
+      @include box-shadow(5px, 5px, 0, 0, $yellow);
     }
   }
 

@@ -1,0 +1,41 @@
+@import "../../base";
+
+.contact {
+  background-color: $blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 180px 0 50px 0;
+
+  &--content {
+    width: 987px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 30px;
+
+    input {
+      height: 76px;
+    }
+
+    textarea {
+      height: 364px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      margin-bottom: 30px;
+      font-size: 42px;
+      padding: 19px;
+
+      &::placeholder {
+        color: $grey;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "../../base";
+
+.footer {
+  background-color: $blue;
+  text-align: center;
+  color: $violet;
+  font-family: "Oswald Regular", sans-serif;
+  letter-spacing: 2.7px;
+  line-height: 21px;
+
+  &--block {
+    height: 10px;
+    width: 100%;
+    background-color: $pink;
+    margin-top: 20px;
+  }
+}

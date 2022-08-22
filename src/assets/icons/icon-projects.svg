@@ -1,0 +1,24 @@
+<svg id="Component_13_1" data-name="Component 13 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="113" height="113" viewBox="0 0 113 113">
+  <defs>
+    <filter id="Rectangle_13" x="0" y="0" width="113" height="113" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" dy="10" input="SourceAlpha"/>
+      <feGaussianBlur result="blur"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Component_5_3" data-name="Component 5 – 3">
+    <g id="Component_4_2" data-name="Component 4 – 2">
+      <g id="Component_3_3" data-name="Component 3 – 3">
+        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_13)">
+          <g id="Rectangle_13-2" data-name="Rectangle 13" fill="#dd7dff" stroke="#000" stroke-width="10">
+            <rect width="103" height="103" stroke="none"/>
+            <rect x="5" y="5" width="93" height="93" fill="none"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <path id="Icon_awesome-code" data-name="Icon awesome-code" d="M19.61,35.965,15.321,34.72a.845.845,0,0,1-.577-1.048L24.342.612A.845.845,0,0,1,25.39.035L29.679,1.28a.845.845,0,0,1,.577,1.048l-9.6,33.061a.843.843,0,0,1-1.048.577Zm-8.016-7.889,3.059-3.263A.844.844,0,0,0,14.6,23.6L8.227,18l6.37-5.6a.838.838,0,0,0,.056-1.209L11.595,7.924a.845.845,0,0,0-1.2-.035L.267,17.381a.838.838,0,0,0,0,1.23l10.132,9.5a.838.838,0,0,0,1.2-.035Zm23.006.042,10.132-9.5a.838.838,0,0,0,0-1.23L34.6,7.882a.851.851,0,0,0-1.2.035L30.347,11.18a.844.844,0,0,0,.056,1.209L36.773,18,30.4,23.6a.838.838,0,0,0-.056,1.209l3.059,3.263a.845.845,0,0,0,1.2.042Z" transform="translate(29 33.499)"/>
+</svg>

@@ -4,29 +4,10 @@ import AboutIcon from "../../assets/icons/icon-about.svg";
 import ResumeIcon from "../../assets/icons/icon-resume.svg";
 import GitHubIcon from "../../assets/icons/icon-github.svg";
 import SectionTitle from "../SectionTitle/SectionTitle";
-import JavaScriptIcon from "../../assets/icons/icon-javascript.svg";
-import HtmlIcon from "../../assets/icons/icon-html.svg";
-import CssIcon from "../../assets/icons/icon-css.svg";
-import ReactIcon from "../../assets/icons/icon-react.svg";
-import VueIcon from "../../assets/icons/icon-vue.svg";
-import SassIcon from "../../assets/icons/icon-sass.svg";
-import TypeScriptIcon from "../../assets/icons/icon-typescript.svg";
-import NodeIcon from "../../assets/icons/icon-node.svg";
-import XdIcon from "../../assets/icons/icon-xd.svg";
+
+import { technologies } from "../../variables/technologies";
 
 const About = () => {
-  const technologies = [
-    { id: 1, name: "JavaScript", icon: JavaScriptIcon },
-    { id: 2, name: "HTML", icon: HtmlIcon },
-    { id: 3, name: "CSS", icon: CssIcon },
-    { id: 4, name: "React", icon: ReactIcon },
-    { id: 3, name: "Vue", icon: VueIcon },
-    { id: 3, name: "Sass", icon: SassIcon },
-    { id: 3, name: "TypeScript", icon: TypeScriptIcon },
-    { id: 3, name: "Node", icon: NodeIcon },
-    { id: 3, name: "Adobe Xd", icon: XdIcon },
-  ];
-
   return (
     <section className="about">
       <div className="about--left">

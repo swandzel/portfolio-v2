@@ -1,0 +1,14 @@
+@import "../../base";
+
+.projects {
+  background-color: $pink;
+  display: flex;
+  padding: 180px 0;
+
+  &--content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    @include container;
+  }
+}
