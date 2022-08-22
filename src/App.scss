@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Oswald Bold";
+  src: url("../src/assets/fonts/Oswald-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Oswald Regular";
+  src: url("../src/assets/fonts/Oswald-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../src/assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Regular", sans-serif;
+}

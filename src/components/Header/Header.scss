@@ -1,0 +1,34 @@
+@import "../../base";
+
+.header {
+  min-height: 950px;
+  height: 100vh;
+  background-color: $yellow;
+  display: flex;
+  align-items: center;
+
+  &--content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include container;
+  }
+
+  &--text {
+    &--name {
+      font-family: "Oswald Bold", sans-serif;
+      text-transform: uppercase;
+      font-size: 84px;
+      line-height: 124px;
+      letter-spacing: 2.7px;
+    }
+
+    &--position {
+      // font-family: "Roboto Regular", sans-serif;
+      font-size: 56px;
+      line-height: 67px;
+      letter-spacing: 4.5px;
+      margin-bottom: 30px;
+    }
+  }
+}

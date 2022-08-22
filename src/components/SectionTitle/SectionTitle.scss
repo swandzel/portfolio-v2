@@ -1,0 +1,25 @@
+@import "../../base";
+
+.section-title {
+  display: flex;
+
+  img {
+    margin-right: 27px;
+  }
+
+  &--title {
+    h2 {
+      font-family: "Oswald Bold", sans-serif;
+      font-size: 64px;
+      line-height: 64px;
+      letter-spacing: 2.7px;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font-family: "Oswald Regular", sans-serif;
+      font-size: 32px;
+      letter-spacing: 2.7px;
+    }
+  }
+}

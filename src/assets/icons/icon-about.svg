@@ -1,0 +1,22 @@
+<svg id="Component_5_1" data-name="Component 5 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="113" height="113" viewBox="0 0 113 113">
+  <defs>
+    <filter id="Rectangle_13" x="0" y="0" width="113" height="113" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" dy="10" input="SourceAlpha"/>
+      <feGaussianBlur result="blur"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Component_4_2" data-name="Component 4 – 2">
+    <g id="Component_3_3" data-name="Component 3 – 3">
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_13)">
+        <g id="Rectangle_13-2" data-name="Rectangle 13" fill="#dd7dff" stroke="#000" stroke-width="10">
+          <rect width="103" height="103" stroke="none"/>
+          <rect x="5" y="5" width="93" height="93" fill="none"/>
+        </g>
+      </g>
+    </g>
+  </g>
+  <path id="Icon_material-person" data-name="Icon material-person" d="M24,24a9,9,0,1,0-9-9A9,9,0,0,0,24,24Zm0,4.5c-6.006,0-18,3.014-18,9v4.5H41.994v-4.5C41.994,31.511,30,28.5,24,28.5Z" transform="translate(27.503 27.503)"/>
+</svg>

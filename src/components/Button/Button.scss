@@ -1,0 +1,15 @@
+@import "../../base";
+
+button {
+  background-color: $violet;
+  border: 3px solid $black;
+  text-transform: uppercase;
+  -webkit-box-shadow: 5px 5px 0px 0px $black;
+  -moz-box-shadow: 5px 5px 0px 0px $black;
+  box-shadow: 5px 5px 0px 0px $black;
+  height: 89px;
+  width: 294px;
+  font-size: 40px;
+  font-family: "Oswald Bold", sans-serif;
+  cursor: pointer;
+}

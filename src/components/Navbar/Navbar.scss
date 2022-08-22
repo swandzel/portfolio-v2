@@ -1,0 +1,29 @@
+@import "../../base";
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  // padding: 0 140px;
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+    @include container;
+
+    li {
+      font-family: "Oswald Regular", sans-serif;
+      text-transform: uppercase;
+      margin-right: 90px;
+      font-size: 34px;
+      letter-spacing: 4.5px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
