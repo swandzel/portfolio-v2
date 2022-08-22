@@ -4,7 +4,6 @@ import AboutIcon from "../../assets/icons/icon-about.svg";
 import ResumeIcon from "../../assets/icons/icon-resume.svg";
 import GitHubIcon from "../../assets/icons/icon-github.svg";
 import SectionTitle from "../SectionTitle/SectionTitle";
-
 import { technologies } from "../../variables/technologies";
 
 const About = () => {

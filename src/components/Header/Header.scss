@@ -30,4 +30,23 @@
       margin-bottom: 30px;
     }
   }
+
+  &--image {
+    position: relative;
+    margin-top: 80px;
+  }
+
+  &--icons {
+    position: absolute;
+  }
+
+  .brackets {
+    bottom: 100px;
+    left: -35px;
+  }
+
+  .laptop {
+    top: 100px;
+    right: 70px;
+  }
 }

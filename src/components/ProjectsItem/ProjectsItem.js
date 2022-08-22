@@ -1,10 +1,19 @@
 import React from "react";
 import "./ProjectsItem.scss";
 import Button from "../Button/Button";
+import { motion } from "framer-motion";
+import { fromBottom } from "../../variables/animations";
 
 const ProjectsItem = ({ title, about, technologies }) => {
   return (
-    <div className="projects-item">
+    <motion.div
+      initial="initial"
+      variants={fromBottom}
+      whileInView="animate"
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ type: "spring" }}
+      className="projects-item"
+    >
       <div className="projects-item--image"></div>
       <div className="projects-item--text">
         <div className="projects-item--title">{title}</div>
@@ -16,7 +25,7 @@ const ProjectsItem = ({ title, about, technologies }) => {
           <Button text="Live" backgroundColor="#ffffff" width="190px" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

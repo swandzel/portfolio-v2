@@ -1,5 +1,7 @@
 import React from "react";
 import "./SectionTitle.scss";
+import { motion } from "framer-motion";
+import { fromBottom } from "../../variables/animations";
 
 const SectionTitle = ({
   icon,
@@ -11,7 +13,15 @@ const SectionTitle = ({
 }) => {
   return (
     <div className="section-title">
-      <img src={icon} alt="About" />
+      <motion.img
+        initial="initial"
+        variants={fromBottom}
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ type: "spring" }}
+        src={icon}
+        alt="About"
+      />
       <div className="section-title--title">
         <h2
           style={{

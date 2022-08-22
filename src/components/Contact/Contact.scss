@@ -11,6 +11,21 @@
 
   &--content {
     width: 987px;
+    position: relative;
+  }
+
+  &--icons {
+    position: absolute;
+  }
+
+  .left {
+    bottom: 30px;
+    left: -85px;
+  }
+
+  .right {
+    top: 70px;
+    right: -100px;
   }
 
   form {
