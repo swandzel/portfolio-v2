@@ -8,7 +8,14 @@
   z-index: 10;
 
   &--scroll {
-    @include box-shadow(0, 5px, 0, 0);
+    background-color: $black;
+    height: 5px;
+    width: 0%;
+    transition: all 0.3s linear;
+  }
+
+  .is-active {
+    width: 100%;
   }
 
   ul {

@@ -13,9 +13,8 @@ const Navbar = () => {
     window.addEventListener("scroll", changeStyleHandler);
     return () => window.removeEventListener("scroll", changeStyleHandler);
   }, []);
-
   return (
-    <nav className={`navbar ${changeStyle ? "navbar--scroll" : ""}`}>
+    <nav className="navbar">
       <ul>
         {navbar_links.map((navbar_link) => (
           <li key={navbar_link.id}>
@@ -23,6 +22,8 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+
+      <div className={`navbar--scroll ${changeStyle ? "is-active" : ""}`} />
     </nav>
   );
 };

@@ -10,7 +10,7 @@ const Header = () => {
   const { scrollY } = useViewportScroll();
   const brackets = useTransform(scrollY, [0, 500], ["100px", "0px"]);
   const laptop = useTransform(scrollY, [0, 500], ["0px", "100px"]);
-  const text = useTransform(scrollY, [0, 500], ["0px", "200px"]);
+  const text = useTransform(scrollY, [0, 500], ["0px", "250px"]);
 
   return (
     <header className="header">
