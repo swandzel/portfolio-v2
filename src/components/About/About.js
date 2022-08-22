@@ -40,7 +40,11 @@ const About = () => {
           </p>
         </div>
         <div className="about--right--icons">
-          <a href="https://github.com/swandzel" target="_blank">
+          <a
+            href="https://github.com/swandzel"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src={GitHubIcon} alt="Check my GitHub" />
           </a>
           <img src={ResumeIcon} alt="Download my resume" />
