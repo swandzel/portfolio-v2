@@ -6,8 +6,13 @@ import Button from "../Button/Button";
 import MessageLeftIcon from "../../assets/icons/icon-message-left.svg";
 import MessageRightIcon from "../../assets/icons/icon-message-right.svg";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
+// import useParallax from "../../variables/useParallax";
 
 const Contact = () => {
+  // const { left, right } = useParallax(ref);
+  // const ref = useRef(null);
+
+  // console.log(left, right);
   const [elementTop, setElementTop] = useState(0);
   const [clientHeight, setClientHeight] = useState(0);
   const ref = useRef(null);

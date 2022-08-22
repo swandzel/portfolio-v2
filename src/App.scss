@@ -25,5 +25,8 @@
   font-family: "Roboto Regular", sans-serif;
   user-select: none;
   scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
+}
+
+html {
+  overflow-x: hidden;
 }

@@ -10,15 +10,21 @@ const Header = () => {
   const { scrollY } = useViewportScroll();
   const brackets = useTransform(scrollY, [0, 500], ["100px", "0px"]);
   const laptop = useTransform(scrollY, [0, 500], ["0px", "100px"]);
+  const text = useTransform(scrollY, [0, 500], ["0px", "200px"]);
 
   return (
     <header className="header">
       <div className="header--content">
-        <div className="header--text">
+        <motion.div
+          className="header--text"
+          style={{
+            y: text,
+          }}
+        >
           <h1 className="header--text--name">Sebastian Wandzel</h1>
           <h2 className="header--text--position">Front-End Developer</h2>
           <Button text="My Portfolio" />
-        </div>
+        </motion.div>
         <div className="header--image">
           <img src={MyPhoto} alt="My pic" />
           <motion.img

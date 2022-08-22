@@ -1,15 +1,53 @@
-import React from "react";
 import "./About.scss";
 import AboutIcon from "../../assets/icons/icon-about.svg";
 import ResumeIcon from "../../assets/icons/icon-resume.svg";
 import GitHubIcon from "../../assets/icons/icon-github.svg";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import { technologies } from "../../variables/technologies";
+import React, { useState, useRef, useLayoutEffect } from "react";
+
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 
 const About = () => {
+  const [elementTop, setElementTop] = useState(0);
+  const [clientHeight, setClientHeight] = useState(0);
+  const ref = useRef(null);
+
+  const initial = elementTop - clientHeight;
+  const final = elementTop + 50;
+  const finalExt = 2000;
+
+  useLayoutEffect(() => {
+    const element = ref.current;
+    const onResize = () => {
+      setElementTop(
+        element.getBoundingClientRect().top + window.scrollY ||
+          window.pageYOffset
+      );
+      setClientHeight(window.innerHeight);
+    };
+    onResize();
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, [ref]);
+
+  const { scrollY } = useViewportScroll();
+  const scaleRight = useTransform(scrollY, [initial, final, 5000], [0.5, 1, 2]);
+  const left = useTransform(scrollY, [initial, final], ["0", "1000px"]);
+  const right = useTransform(
+    scrollY,
+    [initial, final, 5000],
+    ["-150vw", "0px", "50vw"]
+  );
+
   return (
-    <section className="about" id="about">
-      <div className="about--left">
+    <section className="about" id="about" ref={ref}>
+      <motion.div
+        style={{
+          scale: scaleRight,
+        }}
+        className="about--left"
+      >
         <h2>My skills</h2>
         <div className="about--left--technologies">
           {technologies.map((technology) => (
@@ -19,8 +57,13 @@ const About = () => {
             </div>
           ))}
         </div>
-      </div>
-      <div className="about--right">
+      </motion.div>
+      <motion.div
+        style={{
+          x: right,
+        }}
+        className="about--right"
+      >
         <SectionTitle
           icon={AboutIcon}
           title="About"
@@ -48,7 +91,7 @@ const About = () => {
           </a>
           <img src={ResumeIcon} alt="Download my resume" />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
