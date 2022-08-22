@@ -1,8 +1,7 @@
 @import "../../base";
 
 .header {
-  min-height: 950px;
-  height: 100vh;
+  min-height: 900px;
   background-color: $yellow;
   display: flex;
   align-items: center;
@@ -24,7 +23,6 @@
     }
 
     &--position {
-      // font-family: "Roboto Regular", sans-serif;
       font-size: 56px;
       line-height: 67px;
       letter-spacing: 4.5px;
