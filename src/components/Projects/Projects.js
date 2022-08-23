@@ -1,4 +1,3 @@
-import React from "react";
 import "./Projects.scss";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import ProjectsIcon from "../../assets/icons/icon-projects.svg";
