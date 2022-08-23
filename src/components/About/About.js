@@ -4,47 +4,51 @@ import ResumeIcon from "../../assets/icons/icon-resume.svg";
 import GitHubIcon from "../../assets/icons/icon-github.svg";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import { technologies } from "../../variables/technologies";
-import React, { useState, useRef, useLayoutEffect } from "react";
-
-import { motion, useTransform, useViewportScroll } from "framer-motion";
+import useParallax from "../../variables/useParallax";
+import { motion } from "framer-motion";
 
 const About = () => {
-  const [elementTop, setElementTop] = useState(0);
-  const [clientHeight, setClientHeight] = useState(0);
-  const ref = useRef(null);
+  const { ref, aboutToRight, technologiesScale } = useParallax();
 
-  const initial = elementTop - clientHeight;
-  const final = elementTop + 50;
-  const finalExt = 2000;
+  // const [elementTop, setElementTop] = useState(0);
+  // const [clientHeight, setClientHeight] = useState(0);
+  // const ref = useRef(null);
 
-  useLayoutEffect(() => {
-    const element = ref.current;
-    const onResize = () => {
-      setElementTop(
-        element.getBoundingClientRect().top + window.scrollY ||
-          window.pageYOffset
-      );
-      setClientHeight(window.innerHeight);
-    };
-    onResize();
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-  }, [ref]);
+  // const initial = elementTop - clientHeight;
+  // const final = elementTop + 50;
+  // const finalExt = 2000;
 
-  const { scrollY } = useViewportScroll();
-  const scaleRight = useTransform(scrollY, [initial, final, 5000], [0.5, 1, 2]);
-  const left = useTransform(scrollY, [initial, final], ["0", "1000px"]);
-  const right = useTransform(
-    scrollY,
-    [initial, final, 5000],
-    ["-180vw", "0px", "30vw"]
-  );
+  // useLayoutEffect(() => {
+  //   const element = ref.current;
+  //   const onResize = () => {
+  //     setElementTop(
+  //       element.getBoundingClientRect().top + window.scrollY ||
+  //         window.pageYOffset
+  //     );
+  //     setClientHeight(window.innerHeight);
+  //   };
+  //   onResize();
+  //   window.addEventListener("resize", onResize);
+  //   return () => window.removeEventListener("resize", onResize);
+  // }, [ref]);
+
+  // const { scrollY } = useViewportScroll();
+  // const technologiesScale = useTransform(
+  //   scrollY,
+  //   [initial, final, 5000],
+  //   [0.5, 1, 2]
+  // );
+  // const aboutToRight = useTransform(
+  //   scrollY,
+  //   [initial, final, 5000],
+  //   ["-180vw", "0px", "30vw"]
+  // );
 
   return (
     <section className="about" id="about" ref={ref}>
       <motion.div
         style={{
-          scale: scaleRight,
+          scale: technologiesScale,
         }}
         className="about--left"
       >
@@ -60,7 +64,7 @@ const About = () => {
       </motion.div>
       <motion.div
         style={{
-          x: right,
+          x: aboutToRight,
         }}
         className="about--right"
       >

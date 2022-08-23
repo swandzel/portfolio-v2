@@ -1,18 +1,19 @@
 import React from "react";
 import "./ProjectsItem.scss";
 import Button from "../Button/Button";
+import useParallax from "../../variables/useParallax";
 import { motion } from "framer-motion";
-import { fromBottom } from "../../variables/animations";
 
 const ProjectsItem = ({ title, about, technologies }) => {
+  const { ref, projectsScale } = useParallax();
+
   return (
     <motion.div
-      initial="initial"
-      variants={fromBottom}
-      whileInView="animate"
-      viewport={{ once: true, amount: 0.5 }}
-      transition={{ type: "spring" }}
       className="projects-item"
+      style={{
+        scale: projectsScale,
+      }}
+      ref={ref}
     >
       <div className="projects-item--image"></div>
       <div className="projects-item--text">

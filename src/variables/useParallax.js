@@ -1,13 +1,14 @@
 import { useTransform, useViewportScroll } from "framer-motion";
 import { useLayoutEffect, useState, useRef } from "react";
 
-const useParallax = ({ ref }) => {
+const useParallax = () => {
   const [elementTop, setElementTop] = useState(0);
   const [clientHeight, setClientHeight] = useState(0);
 
   const initial = elementTop - clientHeight;
   const final = elementTop + 50;
 
+  const ref = useRef(null);
   useLayoutEffect(() => {
     const element = ref.current;
     const onResize = () => {
@@ -29,11 +30,41 @@ const useParallax = ({ ref }) => {
     [initial + 100, final],
     ["-150px", "0px"]
   );
+  const brackets = useTransform(scrollY, [0, 500], ["100px", "0px"]);
+  const laptop = useTransform(scrollY, [0, 500], ["0px", "100px"]);
+  const text = useTransform(scrollY, [0, 500], ["0px", "250px"]);
+  const technologiesScale = useTransform(
+    scrollY,
+    [initial, final - 50, 5000],
+    [0.5, 1, 2]
+  );
+  const aboutToRight = useTransform(
+    scrollY,
+    [initial, final, 5000],
+    ["-180vw", "0px", "30vw"]
+  );
+  const projectTitle = useTransform(
+    scrollY,
+    [initial, final],
+    ["-10vw", "0px"]
+  );
+  const projectsScale = useTransform(
+    scrollY,
+    [initial, final - 300, 6000],
+    [0.8, 1, 0.8]
+  );
 
   return {
     left,
     right,
     ref,
+    brackets,
+    laptop,
+    text,
+    technologiesScale,
+    aboutToRight,
+    projectsScale,
+    projectTitle,
   };
 };
 

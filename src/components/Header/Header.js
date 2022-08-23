@@ -1,19 +1,20 @@
-import React from "react";
 import Button from "../Button/Button";
 import "./Header.scss";
 import MyPhoto from "../../assets/images/main-photo.png";
-import { motion, useTransform, useViewportScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import BracketsIcon from "../../assets/icons/icon-brackets-header.svg";
 import LaptopIcon from "../../assets/icons/icon-laptop-header.svg";
+import useParallax from "../../variables/useParallax";
 
 const Header = () => {
-  const { scrollY } = useViewportScroll();
-  const brackets = useTransform(scrollY, [0, 500], ["100px", "0px"]);
-  const laptop = useTransform(scrollY, [0, 500], ["0px", "100px"]);
-  const text = useTransform(scrollY, [0, 500], ["0px", "250px"]);
+  // const { scrollY } = useViewportScroll();
+  // const brackets = useTransform(scrollY, [0, 500], ["100px", "0px"]);
+  // const laptop = useTransform(scrollY, [0, 500], ["0px", "100px"]);
+  // const text = useTransform(scrollY, [0, 500], ["0px", "250px"]);
+  const { ref, brackets, laptop, text } = useParallax();
 
   return (
-    <header className="header">
+    <header className="header" ref={ref}>
       <div className="header--content">
         <motion.div
           className="header--text"

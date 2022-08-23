@@ -8,11 +8,5 @@
   letter-spacing: 2.7px;
   line-height: 21px;
   @include scroll-snap;
-
-  &--block {
-    height: 10px;
-    width: 100%;
-    background-color: $pink;
-    margin-top: 20px;
-  }
+  padding-bottom: 20px;
 }

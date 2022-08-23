@@ -7,7 +7,6 @@ const Footer = () => {
       Designed in Adobe XD & built in React
       <br />
       by Sebastian Wandzel 2022
-      <div className="footer--block" />
     </footer>
   );
 };

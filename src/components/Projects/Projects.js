@@ -4,17 +4,27 @@ import SectionTitle from "../SectionTitle/SectionTitle";
 import ProjectsIcon from "../../assets/icons/icon-projects.svg";
 import ProjectsItem from "../ProjectsItem/ProjectsItem";
 import { projects } from "../../variables/projects";
+import useParallax from "../../variables/useParallax";
+import { motion } from "framer-motion";
 
 const Projects = () => {
+  const { ref, projectTitle } = useParallax();
+
   return (
-    <div className="projects" id="projects">
+    <div className="projects" id="projects" ref={ref}>
       <div className="projects--content">
-        <SectionTitle
-          icon={ProjectsIcon}
-          title="Projects"
-          subtitle="Demo projects which showcase my skills"
-          shadowColor="#DD7DFF"
-        />
+        <motion.div
+          style={{
+            scale: projectTitle,
+          }}
+        >
+          <SectionTitle
+            icon={ProjectsIcon}
+            title="Projects"
+            subtitle="Demo projects which showcase my skills"
+            shadowColor="#DD7DFF"
+          />
+        </motion.div>
         {projects.map((project) => (
           <ProjectsItem
             key={project.id}
