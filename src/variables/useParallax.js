@@ -21,7 +21,7 @@ const useParallax = () => {
     onResize();
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
-  }, [ref, window.innerHeight]);
+  }, [ref]);
 
   const { scrollY } = useViewportScroll();
   const left = useTransform(scrollY, [initial, final], ["150px", "0px"]);
