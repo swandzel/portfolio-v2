@@ -8,14 +8,14 @@ import useParallax from "../../variables/useParallax";
 import { motion } from "framer-motion";
 
 const Projects = () => {
-  const { ref, projectTitle } = useParallax();
+  const { ref, projectsTitle } = useParallax();
 
   return (
     <div className="projects" id="projects" ref={ref}>
       <div className="projects--content">
         <motion.div
           style={{
-            scale: projectTitle,
+            scale: projectsTitle,
           }}
         >
           <SectionTitle

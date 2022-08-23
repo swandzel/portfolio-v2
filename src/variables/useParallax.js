@@ -21,7 +21,7 @@ const useParallax = () => {
     onResize();
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
-  }, [ref]);
+  }, [ref, window.innerHeight]);
 
   const { scrollY } = useViewportScroll();
   const left = useTransform(scrollY, [initial, final], ["150px", "0px"]);
@@ -43,16 +43,17 @@ const useParallax = () => {
     [initial, final, 5000],
     ["-180vw", "0px", "30vw"]
   );
-  const projectTitle = useTransform(
+  const projectsTitle = useTransform(
     scrollY,
-    [initial, final],
-    ["-10vw", "0px"]
+    [initial, final - 350, 6000],
+    [0.8, 1, 0.8]
   );
   const projectsScale = useTransform(
     scrollY,
-    [initial, final - 300, 6000],
+    [initial, final - 280, 6000],
     [0.8, 1, 0.8]
   );
+  const contactScale = useTransform(scrollY, [initial, final - 350], [0.5, 1]);
 
   return {
     left,
@@ -64,7 +65,8 @@ const useParallax = () => {
     technologiesScale,
     aboutToRight,
     projectsScale,
-    projectTitle,
+    contactScale,
+    projectsTitle,
   };
 };
 

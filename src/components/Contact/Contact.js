@@ -8,42 +8,13 @@ import { motion } from "framer-motion";
 import useParallax from "../../variables/useParallax";
 
 const Contact = () => {
-  const { left, right, ref, projectsScale } = useParallax();
-
-  // const [elementTop, setElementTop] = useState(0);
-  // const [clientHeight, setClientHeight] = useState(0);
-  // const ref = useRef(null);
-
-  // const initial = elementTop - clientHeight;
-  // const final = elementTop + 50;
-
-  // useLayoutEffect(() => {
-  //   const element = ref.current;
-  //   const onResize = () => {
-  //     setElementTop(
-  //       element.getBoundingClientRect().top + window.scrollY ||
-  //         window.pageYOffset
-  //     );
-  //     setClientHeight(window.innerHeight);
-  //   };
-  //   onResize();
-  //   window.addEventListener("resize", onResize);
-  //   return () => window.removeEventListener("resize", onResize);
-  // }, [ref]);
-
-  // const { scrollY } = useViewportScroll();
-  // const left = useTransform(scrollY, [initial, final], ["150px", "0px"]);
-  // const right = useTransform(
-  //   scrollY,
-  //   [initial + 100, final],
-  //   ["-150px", "0px"]
-  // );
+  const { left, right, ref, contactScale } = useParallax();
 
   return (
     <div className="contact" id="contact" ref={ref}>
       <motion.div
         style={{
-          scale: projectsScale,
+          scale: contactScale,
         }}
         className="contact--content"
       >

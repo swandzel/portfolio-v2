@@ -10,40 +10,6 @@ import { motion } from "framer-motion";
 const About = () => {
   const { ref, aboutToRight, technologiesScale } = useParallax();
 
-  // const [elementTop, setElementTop] = useState(0);
-  // const [clientHeight, setClientHeight] = useState(0);
-  // const ref = useRef(null);
-
-  // const initial = elementTop - clientHeight;
-  // const final = elementTop + 50;
-  // const finalExt = 2000;
-
-  // useLayoutEffect(() => {
-  //   const element = ref.current;
-  //   const onResize = () => {
-  //     setElementTop(
-  //       element.getBoundingClientRect().top + window.scrollY ||
-  //         window.pageYOffset
-  //     );
-  //     setClientHeight(window.innerHeight);
-  //   };
-  //   onResize();
-  //   window.addEventListener("resize", onResize);
-  //   return () => window.removeEventListener("resize", onResize);
-  // }, [ref]);
-
-  // const { scrollY } = useViewportScroll();
-  // const technologiesScale = useTransform(
-  //   scrollY,
-  //   [initial, final, 5000],
-  //   [0.5, 1, 2]
-  // );
-  // const aboutToRight = useTransform(
-  //   scrollY,
-  //   [initial, final, 5000],
-  //   ["-180vw", "0px", "30vw"]
-  // );
-
   return (
     <section className="about" id="about" ref={ref}>
       <motion.div
