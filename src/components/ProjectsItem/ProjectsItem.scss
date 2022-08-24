@@ -12,6 +12,12 @@
   &--image {
     width: 40%;
     background-color: $violet;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 
   &--text {

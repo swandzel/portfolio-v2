@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import useParallax from "../../variables/useParallax";
 import { motion } from "framer-motion";
 
-const ProjectsItem = ({ title, about, technologies, code, live }) => {
+const ProjectsItem = ({ title, about, technologies, image, code, live }) => {
   const { ref, projectsScale } = useParallax();
 
   return (
@@ -15,7 +15,9 @@ const ProjectsItem = ({ title, about, technologies, code, live }) => {
       }}
       ref={ref}
     >
-      <div className="projects-item--image"></div>
+      <div className="projects-item--image">
+        <img src={image} alt={title} />
+      </div>
       <div className="projects-item--text">
         <div>
           <div className="projects-item--title">{title}</div>

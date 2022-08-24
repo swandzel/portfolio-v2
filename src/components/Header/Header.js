@@ -9,10 +9,6 @@ import useParallax from "../../variables/useParallax";
 const Header = () => {
   const { ref, brackets, laptop, text } = useParallax();
 
-  // const jumpToProjects = () => {
-  //   document.getElementById("projects").scrollIntoView();
-  // };
-
   return (
     <header className="header" ref={ref}>
       <div className="header--content">

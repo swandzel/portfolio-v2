@@ -13,6 +13,7 @@ const Navbar = () => {
     window.addEventListener("scroll", changeStyleHandler);
     return () => window.removeEventListener("scroll", changeStyleHandler);
   }, []);
+
   return (
     <nav className="navbar">
       <ul>
