@@ -17,10 +17,14 @@ const ProjectsItem = ({ title, about, technologies, code, live }) => {
     >
       <div className="projects-item--image"></div>
       <div className="projects-item--text">
-        <div className="projects-item--title">{title}</div>
-        <div className="projects-item--about">{about}</div>
-        <div className="projects-item--technologies">Technologies:</div>
-        <div className="projects-item--technologies--list">{technologies}</div>
+        <div>
+          <div className="projects-item--title">{title}</div>
+          <div className="projects-item--about">{about}</div>
+          <div className="projects-item--technologies">Technologies:</div>
+          <div className="projects-item--technologies--list">
+            {technologies}
+          </div>
+        </div>
         <div className="projects-item--buttons">
           <Button
             text="Code"
