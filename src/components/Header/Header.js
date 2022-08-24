@@ -23,7 +23,7 @@ const Header = () => {
           <Button text="My Portfolio" />
         </motion.div>
         <div className="header--image">
-          <img src={MyPhoto} alt="My pic" />
+          <img src={MyPhoto} alt="My pic" className="header--image--my-pic" />
           <motion.img
             src={BracketsIcon}
             alt="Icon #1"

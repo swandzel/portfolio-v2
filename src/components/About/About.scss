@@ -39,6 +39,11 @@
         text-align: center;
         margin-bottom: 35px;
 
+        img {
+          height: 100px;
+          width: 100px;
+        }
+
         img:hover + .tooltip {
           display: block;
           position: absolute;
@@ -89,6 +94,8 @@
 
       img {
         cursor: pointer;
+        height: 110px;
+        width: 110px;
 
         &:last-of-type {
           margin-right: 0;
