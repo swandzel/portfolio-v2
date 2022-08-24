@@ -6,6 +6,10 @@
   padding: 180px 0;
   @include scroll-snap;
 
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+
   &--content {
     display: flex;
     flex-direction: column;

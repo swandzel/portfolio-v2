@@ -12,15 +12,25 @@
     justify-content: space-around;
     align-items: center;
     @include container;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   &--text {
+    width: 50%;
+
     &--name {
       font-family: "Oswald Bold", sans-serif;
       text-transform: uppercase;
       font-size: 84px;
       line-height: 124px;
       letter-spacing: 2.7px;
+
+      @media (max-width: 1640px) {
+        line-height: 90px;
+      }
     }
 
     &--position {
@@ -34,10 +44,16 @@
   &--image {
     position: relative;
     margin-top: 80px;
+    width: 50%;
 
     &--my-pic {
       height: 691px;
       width: 801px;
+
+      @media (max-width: 1640px) {
+        height: 40vw;
+        width: auto;
+      }
     }
   }
 

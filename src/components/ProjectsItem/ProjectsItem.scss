@@ -3,15 +3,23 @@
 .projects-item {
   display: flex;
   background-color: $white;
-  height: 495px;
+  min-height: 495px;
   border: 10px solid $black;
   margin-top: 70px !important;
   @include box-shadow(20px, 20px, 0, 0);
   @include container;
 
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
+
   &--image {
     width: 40%;
     background-color: $violet;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
 
     img {
       height: 100%;
@@ -26,6 +34,10 @@
     justify-content: space-between;
     padding: 20px;
     width: 60%;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   &--title,

@@ -6,6 +6,10 @@
   @include container;
   @include scroll-snap;
 
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+
   &--left,
   &--right {
     flex: 1;

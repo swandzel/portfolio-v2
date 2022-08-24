@@ -11,6 +11,11 @@ $blue: #4b3dfa;
   width: 100%;
   max-width: 1640px;
   margin: auto;
+
+  @media (max-width: 1640px) {
+    margin: 0 50px;
+    max-width: fit-content;
+  }
 }
 
 @mixin box-shadow($val1, $val2, $val3, $val4, $color: $black) {
