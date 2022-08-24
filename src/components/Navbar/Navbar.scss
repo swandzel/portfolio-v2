@@ -7,6 +7,16 @@
   height: 80px;
   z-index: 10;
 
+  @media (max-width: 1640px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  @media (max-width: 768px) {
+    align-items: center;
+  }
+
   &--scroll {
     background-color: $black;
     height: 5px;
@@ -28,10 +38,19 @@
 
     @media (max-width: 768px) {
       justify-content: center;
+      // flex-wrap: wrap;
     }
 
     li {
       margin-right: 90px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @media (max-width: 1200px) {
+        margin-right: 60px;
+      }
 
       @media (max-width: 768px) {
         margin-right: 20px;
@@ -45,6 +64,10 @@
       letter-spacing: 4.5px;
       text-decoration: none;
       color: $black;
+
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
 
       &:hover {
         text-decoration: underline;
