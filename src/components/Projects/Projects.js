@@ -30,6 +30,8 @@ const Projects = () => {
             title={project.title}
             about={project.about}
             technologies={project.technologies}
+            code={project.code}
+            live={project.live}
           />
         ))}
       </div>

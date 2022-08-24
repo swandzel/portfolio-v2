@@ -1,12 +1,17 @@
 @import "../../base";
 
-button {
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 3px solid $black;
   text-transform: uppercase;
   @include box-shadow(5px, 5px, 0, 0);
   height: 89px;
   font-size: 40px;
   font-family: "Oswald Bold", sans-serif;
+  color: $black;
+  text-decoration: none;
   cursor: pointer;
 
   &:hover {

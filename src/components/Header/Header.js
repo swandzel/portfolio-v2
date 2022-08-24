@@ -9,6 +9,10 @@ import useParallax from "../../variables/useParallax";
 const Header = () => {
   const { ref, brackets, laptop, text } = useParallax();
 
+  // const jumpToProjects = () => {
+  //   document.getElementById("projects").scrollIntoView();
+  // };
+
   return (
     <header className="header" ref={ref}>
       <div className="header--content">
@@ -20,7 +24,7 @@ const Header = () => {
         >
           <h1 className="header--text--name">Sebastian Wandzel</h1>
           <h2 className="header--text--position">Front-End Developer</h2>
-          <Button text="My Portfolio" />
+          <Button text="My Portfolio" link="#projects" />
         </motion.div>
         <div className="header--image">
           <img src={MyPhoto} alt="My pic" className="header--image--my-pic" />

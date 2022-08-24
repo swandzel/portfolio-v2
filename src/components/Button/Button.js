@@ -1,10 +1,22 @@
 import "./Button.scss";
 
-const Button = ({ text, backgroundColor = "#dd7dff", width = "294px" }) => {
+const Button = ({
+  text,
+  backgroundColor = "#dd7dff",
+  width = "294px",
+  link,
+  external = false,
+}) => {
   return (
-    <button style={{ backgroundColor: backgroundColor, width: `${width}` }}>
+    <a
+      href={link}
+      style={{ backgroundColor: backgroundColor, width: `${width}` }}
+      className="button"
+      target={external ? "_blank" : "_self"}
+      rel="noreferrer"
+    >
       {text}
-    </button>
+    </a>
   );
 };
 

@@ -49,9 +49,10 @@
   }
 
   &--buttons {
+    display: flex;
     align-self: flex-end;
 
-    button:nth-child(1) {
+    a:nth-child(1) {
       margin-right: 24px;
     }
   }
