@@ -7,7 +7,6 @@ const useParallax = () => {
   const [clientWidth, setClientWidth] = useState(0);
 
   const initial = elementTop - clientHeight;
-  console.log(clientHeight);
   const final = elementTop + 50;
 
   const ref = useRef(null);
@@ -61,17 +60,6 @@ const useParallax = () => {
     [0.8, 1, clientWidth > 500 ? 0.8 : 1]
   );
   const contactScale = useTransform(scrollY, [initial, final - 350], [0.5, 1]);
-
-  // let left,
-  //   right,
-  //   brackets,
-  //   laptop,
-  //   text,
-  //   technologiesScale,
-  //   aboutToRight,
-  //   projectsScale,
-  //   contactScale,
-  //   projectsTitle = 0;
 
   return {
     left,
