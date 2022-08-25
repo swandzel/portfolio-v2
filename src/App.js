@@ -12,13 +12,10 @@ const App = () => {
   const [showLoader, setShowLoader] = useState(true);
 
   useEffect(() => {
-    const loaderToggle = () => {
-      setTimeout(() => {
-        setShowLoader(false);
-      }, 2000);
-    };
-    window.addEventListener("load", loaderToggle);
-    return () => window.addEventListener("load", loaderToggle);
+    const loaderToggle = setTimeout(() => {
+      setShowLoader(false);
+    }, 2000);
+    return () => clearTimeout(loaderToggle);
   }, []);
 
   return (
