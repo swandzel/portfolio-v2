@@ -29,11 +29,6 @@ $blue: #4b3dfa;
   box-shadow: $val1 $val2 $val3 $val4 $color;
 }
 
-@mixin scroll-snap {
-  scroll-snap-align: start;
-  scroll-snap-stop: normal;
-}
-
 @mixin section-padding {
   padding: 180px 0;
 

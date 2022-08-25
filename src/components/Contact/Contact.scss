@@ -7,7 +7,6 @@
   justify-content: center;
   align-items: center;
   @include section-padding;
-  @include scroll-snap;
   padding-bottom: 50px;
 
   &--content {
@@ -85,6 +84,14 @@
       font-size: 42px;
       padding: 19px;
       user-select: auto;
+
+      @media (max-width: 768px) {
+        font-size: 36px;
+      }
+
+      @media (max-width: 550px) {
+        font-size: 24px;
+      }
 
       &::placeholder {
         color: $grey;

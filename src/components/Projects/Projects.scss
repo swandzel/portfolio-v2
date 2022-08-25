@@ -4,7 +4,6 @@
   background-color: $pink;
   display: flex;
   @include section-padding;
-  @include scroll-snap;
 
   &--content {
     display: flex;

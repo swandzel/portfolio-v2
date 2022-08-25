@@ -27,11 +27,6 @@
   font-family: "Roboto Regular", sans-serif;
   user-select: none;
   scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
-
-  @media (max-width: 768px) {
-    scroll-snap-type: none;
-  }
 }
 
 body {
