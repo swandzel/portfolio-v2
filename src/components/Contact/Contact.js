@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import useParallax from "../../variables/useParallax";
 
 const Contact = () => {
-  const { left, right, ref, contactScale } = useParallax();
+  const { left, right, ref, contactScale, clientWidth } = useParallax();
 
   return (
     <div className="contact" id="contact" ref={ref}>
@@ -21,7 +21,7 @@ const Contact = () => {
         <SectionTitle
           icon={EmailIcon}
           title="Email Me"
-          subtitle="Want to hire me?"
+          subtitle={clientWidth > 410 ? "Want to hire me?" : ""}
           shadowColor="#C4C4C4"
           titleColor="#DD7DFF"
           subtitleColor="#C4C4C4"

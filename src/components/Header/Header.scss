@@ -55,10 +55,6 @@
         line-height: 80px;
         font-size: 70px;
       }
-
-      // @media (max-width: 1640px) {
-      //   font-size: 5vw;
-      // }
     }
 
     &--position {
@@ -70,6 +66,11 @@
       @media (max-width: 1640px) {
         line-height: 50px;
         font-size: 36px;
+
+        @media (max-width: 550px) {
+          line-height: 40px;
+          padding: 0 20px;
+        }
       }
     }
   }
@@ -94,7 +95,6 @@
       @media (max-width: 1640px) {
         height: auto;
         width: 100%;
-        // min-height: 550px;
       }
 
       @media (max-width: 1200px) {
@@ -148,7 +148,7 @@
     left: -35px;
 
     @media (max-width: 900px) {
-      bottom: 100px;
+      bottom: 170px;
       left: 100px;
     }
 

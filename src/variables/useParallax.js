@@ -4,8 +4,10 @@ import { useLayoutEffect, useState, useRef } from "react";
 const useParallax = () => {
   const [elementTop, setElementTop] = useState(0);
   const [clientHeight, setClientHeight] = useState(0);
+  const [clientWidth, setClientWidth] = useState(0);
 
   const initial = elementTop - clientHeight;
+  console.log(clientHeight);
   const final = elementTop + 50;
 
   const ref = useRef(null);
@@ -17,6 +19,7 @@ const useParallax = () => {
           window.pageYOffset
       );
       setClientHeight(window.innerHeight);
+      setClientWidth(window.innerWidth);
     };
     onResize();
     window.addEventListener("resize", onResize);
@@ -36,12 +39,16 @@ const useParallax = () => {
   const technologiesScale = useTransform(
     scrollY,
     [initial, final - 50, 5000],
-    [0.5, 1, 2]
+    [0.5, 1, clientWidth > 900 ? 2 : 1]
   );
   const aboutToRight = useTransform(
     scrollY,
     [initial, final, 5000],
-    ["-180vw", "0px", "30vw"]
+    [
+      clientWidth > 900 ? "-180vw" : "0",
+      "0px",
+      clientWidth > 900 ? "30vw" : "0",
+    ]
   );
   const projectsTitle = useTransform(
     scrollY,
@@ -51,7 +58,7 @@ const useParallax = () => {
   const projectsScale = useTransform(
     scrollY,
     [initial, final - 280, 6000],
-    [0.8, 1, 0.8]
+    [0.8, 1, clientWidth > 500 ? 0.8 : 1]
   );
   const contactScale = useTransform(scrollY, [initial, final - 350], [0.5, 1]);
 
@@ -78,6 +85,7 @@ const useParallax = () => {
     projectsScale,
     contactScale,
     projectsTitle,
+    clientWidth,
   };
 };
 

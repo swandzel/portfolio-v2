@@ -7,6 +7,10 @@
     margin-right: 27px;
     height: 115px;
     width: 115px;
+
+    @media (max-width: 550px) {
+      margin-right: 10px;
+    }
   }
 
   &--title {
@@ -24,6 +28,11 @@
       @media (max-width: 550px) {
         font-size: 50px;
         line-height: 55px;
+      }
+
+      @media (max-width: 550px) {
+        font-size: 45px;
+        line-height: 50px;
       }
     }
 

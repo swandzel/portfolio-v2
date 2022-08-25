@@ -6,10 +6,6 @@
   @include section-padding;
   @include scroll-snap;
 
-  // @media (max-width: 768px) {
-  //   padding: 0;
-  // }
-
   &--content {
     display: flex;
     flex-direction: column;

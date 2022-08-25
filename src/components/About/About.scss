@@ -3,17 +3,13 @@
 .about {
   @include section-padding;
   @include scroll-snap;
-  // background-color: aquamarine;
 
   &--content {
     display: flex;
-    // background-color: aquamarine;
     @include container;
 
     @media (max-width: 900px) {
       flex-direction: column-reverse;
-      // padding: 0;
-      // margin: 0;
     }
   }
 
@@ -43,6 +39,12 @@
 
     @media (max-width: 600px) {
       max-height: initial;
+      padding: 0;
+    }
+
+    @media (max-width: 500px) {
+      border: 0;
+      @include box-shadow(0, 0, 0, 0);
     }
 
     h2 {
@@ -124,6 +126,10 @@
     &--icons {
       align-self: flex-end;
       margin-top: 60px;
+
+      @media (max-width: 900px) {
+        margin: 30px;
+      }
 
       @media (max-width: 550px) {
         align-self: center;
