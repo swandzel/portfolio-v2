@@ -110,6 +110,10 @@
     &--about {
       margin-top: 70px;
 
+      @media (max-width: 550px) {
+        margin-top: 35px;
+      }
+
       p {
         font-size: 28px;
         line-height: 36px;
