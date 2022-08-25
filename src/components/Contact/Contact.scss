@@ -6,14 +6,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 180px 0 50px 0;
+  @include section-padding;
   @include scroll-snap;
+  padding-bottom: 50px;
 
   &--content {
     width: 100%;
     max-width: 987px;
     position: relative;
     padding: 0 20px;
+
+    @media (max-width: 1200px) {
+      width: 90%;
+    }
   }
 
   &--icons {
@@ -24,16 +29,35 @@
   .right {
     width: 200px;
     height: 155px;
+
+    @media (max-width: 1200px) {
+      width: 100px;
+      height: 77.5px;
+    }
+
+    @media (max-width: 550px) {
+      display: none;
+    }
   }
 
   .left {
     bottom: 30px;
     left: -85px;
+
+    @media (max-width: 1200px) {
+      bottom: 82px;
+      left: -21px;
+    }
   }
 
   .right {
     top: 70px;
     right: -100px;
+
+    @media (max-width: 1200px) {
+      top: 108px;
+      right: -28px;
+    }
   }
 
   form {

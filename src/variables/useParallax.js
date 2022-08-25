@@ -55,6 +55,17 @@ const useParallax = () => {
   );
   const contactScale = useTransform(scrollY, [initial, final - 350], [0.5, 1]);
 
+  // let left,
+  //   right,
+  //   brackets,
+  //   laptop,
+  //   text,
+  //   technologiesScale,
+  //   aboutToRight,
+  //   projectsScale,
+  //   contactScale,
+  //   projectsTitle = 0;
+
   return {
     left,
     right,

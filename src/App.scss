@@ -26,10 +26,11 @@
   box-sizing: border-box;
   font-family: "Roboto Regular", sans-serif;
   user-select: none;
-  scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
+  // scroll-behavior: smooth;
+  // scroll-snap-type: y proximity;
 }
 
-html {
+body {
   overflow-x: hidden;
+  width: 100%;
 }

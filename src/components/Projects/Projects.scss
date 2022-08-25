@@ -3,17 +3,21 @@
 .projects {
   background-color: $pink;
   display: flex;
-  padding: 180px 0;
+  @include section-padding;
   @include scroll-snap;
 
-  @media (max-width: 768px) {
-    padding: 0;
-  }
+  // @media (max-width: 768px) {
+  //   padding: 0;
+  // }
 
   &--content {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     @include container;
+
+    @media (max-width: 550px) {
+      width: 90%;
+    }
   }
 }

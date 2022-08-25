@@ -1,18 +1,29 @@
 @import "../../base";
 
 .about {
-  display: flex;
-  padding: 180px 0;
-  @include container;
+  @include section-padding;
   @include scroll-snap;
+  // background-color: aquamarine;
 
-  @media (max-width: 768px) {
-    flex-direction: column-reverse;
+  &--content {
+    display: flex;
+    // background-color: aquamarine;
+    @include container;
+
+    @media (max-width: 900px) {
+      flex-direction: column-reverse;
+      // padding: 0;
+      // margin: 0;
+    }
   }
 
   &--left,
   &--right {
     flex: 1;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   &--left {
@@ -20,9 +31,18 @@
     margin-right: 95px;
     @include box-shadow(20px, 20px, 0, 0);
     padding: 30px;
+    max-height: 625px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1000px) {
+      margin-right: 50px;
+    }
+
+    @media (max-width: 900px) {
       margin-right: 0;
+    }
+
+    @media (max-width: 600px) {
+      max-height: initial;
     }
 
     h2 {
@@ -46,6 +66,10 @@
         width: 33%;
         text-align: center;
         margin-bottom: 35px;
+
+        @media (max-width: 550px) {
+          width: 50%;
+        }
 
         img {
           height: 100px;
@@ -89,12 +113,21 @@
         line-height: 36px;
         margin-bottom: 16px;
         letter-spacing: 2.7px;
+
+        @media (max-width: 550px) {
+          font-size: 20px;
+          line-height: 25px;
+        }
       }
     }
 
     &--icons {
       align-self: flex-end;
       margin-top: 60px;
+
+      @media (max-width: 550px) {
+        align-self: center;
+      }
 
       a {
         margin-right: 40px;
