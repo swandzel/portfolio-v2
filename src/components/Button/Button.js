@@ -6,17 +6,30 @@ const Button = ({
   width = "294px",
   link,
   external = false,
+  email = false,
 }) => {
   return (
-    <a
-      href={link}
-      style={{ backgroundColor: backgroundColor, width: `${width}` }}
-      className="button"
-      target={external ? "_blank" : "_self"}
-      rel="noreferrer"
-    >
-      {text}
-    </a>
+    <>
+      {email ? (
+        <button
+          type="submit"
+          style={{ backgroundColor: backgroundColor, width: `${width}` }}
+          className="button"
+        >
+          {text}
+        </button>
+      ) : (
+        <a
+          href={link}
+          style={{ backgroundColor: backgroundColor, width: `${width}` }}
+          className="button"
+          target={external ? "_blank" : "_self"}
+          rel="noreferrer"
+        >
+          {text}
+        </a>
+      )}
+    </>
   );
 };
 

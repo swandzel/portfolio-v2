@@ -42,11 +42,16 @@ const Contact = () => {
             y: right,
           }}
         />
-        <form>
-          <input type="text" placeholder="Name" />
-          <input type="text" placeholder="Email" />
-          <textarea placeholder="Message" />
-          <Button text="Send" />
+        <form
+          action="https://formsubmit.co/d2d67f1d6a2c4b67244ca11c700ead82"
+          method="POST"
+        >
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="hidden" name="_next" value="https://onet.pl" />
+          <input type="hidden" name="_captcha" value="false" />
+          <textarea type="text" name="message" placeholder="Message" />
+          <Button text="Send" email />
         </form>
       </motion.div>
     </div>
