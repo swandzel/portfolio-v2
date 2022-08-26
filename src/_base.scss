@@ -6,6 +6,7 @@ $darkgrey: #504e4e;
 $white: #ffffff;
 $pink: #fcddec;
 $blue: #4b3dfa;
+$overlay: #504e4e7e;
 
 @mixin container {
   width: 100%;
@@ -15,7 +16,6 @@ $blue: #4b3dfa;
   @media (max-width: 1640px) {
     margin: 0 50px;
     max-width: fit-content;
-    // max-width: none;
   }
 
   @media (max-width: 600px) {

@@ -6,9 +6,16 @@ import SectionTitle from "../SectionTitle/SectionTitle";
 import { technologies } from "../../variables/technologies";
 import useParallax from "../../variables/useParallax";
 import { motion } from "framer-motion";
+import Modal from "../Modal/Modal";
+import { useState } from "react";
 
 const About = () => {
+  const [showModal, setShowModal] = useState(false);
   const { ref, aboutToRight, technologiesScale } = useParallax();
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
 
   return (
     <section className="about" id="about" ref={ref}>
@@ -63,10 +70,17 @@ const About = () => {
             >
               <img src={GitHubIcon} alt="Check my GitHub" />
             </a>
-            <img src={ResumeIcon} alt="Download my resume" />
+            <img
+              src={ResumeIcon}
+              alt="Download my resume"
+              onClick={toggleModal}
+            />
           </div>
         </motion.div>
       </div>
+      {showModal && (
+        <Modal toggleModal={toggleModal} setShowModal={setShowModal} />
+      )}
     </section>
   );
 };

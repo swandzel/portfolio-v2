@@ -1,0 +1,47 @@
+@import "../../base";
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: $overlay;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 11;
+
+  &--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $yellow;
+    width: 768px;
+    min-height: 500px;
+    font-family: "Oswald Bold", sans-serif;
+    text-transform: uppercase;
+    font-size: 84px;
+    line-height: 124px;
+    letter-spacing: 2.7px;
+    @include box-shadow(20px, 20px, 0, 0);
+    border: 19px solid $black;
+    text-align: center;
+    padding: 15px;
+
+    @media (max-width: 607px) {
+      line-height: 80px;
+      font-size: 70px;
+    }
+
+    a {
+      margin-bottom: 20px;
+    }
+  }
+
+  &--close {
+    align-self: flex-end;
+    cursor: pointer;
+  }
+}
