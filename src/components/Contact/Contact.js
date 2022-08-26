@@ -48,7 +48,11 @@ const Contact = () => {
         >
           <input type="text" name="name" placeholder="Name" required />
           <input type="email" name="email" placeholder="Email" required />
-          <input type="hidden" name="_next" value="https://onet.pl" />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://swandzel.netlify.app/"
+          />
           <input type="hidden" name="_captcha" value="false" />
           <textarea type="text" name="message" placeholder="Message" />
           <Button text="Send" email />
