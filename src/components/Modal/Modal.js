@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import Button from "../Button/Button";
 import "./Modal.scss";
+import "../Button/Button.scss";
 
 const Modal = ({ setShowModal, toggleModal }) => {
   const closeModal = (e) => {
@@ -21,7 +21,14 @@ const Modal = ({ setShowModal, toggleModal }) => {
           X
         </div>
         Here is my CV
-        <Button text="Download" />
+        <a
+          href={require("../../assets/CV_Sebastian_Wandzel.pdf")}
+          download="CV_Sebastian_Wandzel"
+          className="button"
+          style={{ backgroundColor: "#dd7dff", width: "294px" }}
+        >
+          download
+        </a>
       </div>
     </div>
   );
