@@ -27,7 +27,7 @@ const Modal = ({ setShowModal, toggleModal }) => {
           className="button"
           style={{ backgroundColor: "#dd7dff", width: "294px" }}
         >
-          download
+          Download
         </a>
       </div>
     </div>
