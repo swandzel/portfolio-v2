@@ -1,6 +1,8 @@
 import "./Navbar.scss";
 import { navbar_links } from "../../variables/navbar-links";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { headerAnim } from "../../variables/animations";
 
 const Navbar = () => {
   const [changeStyle, setChangeStyle] = useState(false);
@@ -16,13 +18,13 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <ul>
+      <motion.ul variants={headerAnim} initial="initial" animate="animate">
         {navbar_links.map((navbar_link) => (
           <li key={navbar_link.id}>
             <a href={navbar_link.href}>{navbar_link.link}</a>
           </li>
         ))}
-      </ul>
+      </motion.ul>
 
       <div className={`navbar--scroll ${changeStyle ? "is-active" : ""}`} />
     </nav>

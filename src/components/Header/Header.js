@@ -6,13 +6,19 @@ import { motion } from "framer-motion";
 import BracketsIcon from "../../assets/icons/icon-brackets-header.svg";
 import LaptopIcon from "../../assets/icons/icon-laptop-header.svg";
 import useParallax from "../../variables/useParallax";
+import { headerAnim } from "../../variables/animations";
 
 const Header = () => {
   const { ref, brackets, laptop, text } = useParallax();
 
   return (
     <header className="header" ref={ref}>
-      <div className="header--content">
+      <motion.div
+        className="header--content"
+        variants={headerAnim}
+        initial="initial"
+        animate="animate"
+      >
         <motion.div
           className="header--text"
           style={{
@@ -48,7 +54,7 @@ const Header = () => {
             }}
           />
         </div>
-      </div>
+      </motion.div>
     </header>
   );
 };
