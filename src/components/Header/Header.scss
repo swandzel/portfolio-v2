@@ -80,7 +80,7 @@
     text-align: center;
 
     @media (max-width: 900px) {
-      padding-left: 100px;
+      padding-left: 40px;
     }
 
     @media (max-width: 500px) {
@@ -103,12 +103,8 @@
       }
 
       @media (max-width: 900px) {
-        height: 52vw;
+        height: 65vw;
         margin-bottom: 100px;
-      }
-
-      @media (max-width: 700px) {
-        height: 60vw;
       }
 
       @media (max-width: 500px) {
@@ -116,7 +112,7 @@
       }
 
       &-mobile {
-        width: 100%;
+        width: 100vw;
         height: 215vw;
         display: none;
 

@@ -1,7 +1,7 @@
 import Button from "../Button/Button";
 import "./Header.scss";
-import MyPhoto from "../../assets/images/main-photo.png";
-import MyPhotoMobile from "../../assets/images/main-photo-mobile.png";
+import MyPhoto from "../../assets/images/main-photo-new.webp";
+import MyPhotoMobile from "../../assets/images/main-photo-mobile-new.webp";
 import { motion } from "framer-motion";
 import BracketsIcon from "../../assets/icons/icon-brackets-header.svg";
 import LaptopIcon from "../../assets/icons/icon-laptop-header.svg";
