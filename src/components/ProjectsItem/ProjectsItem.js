@@ -16,7 +16,7 @@ const ProjectsItem = ({ title, about, technologies, image, code, live }) => {
       ref={ref}
     >
       <div className="projects-item--image">
-        <img src={image} alt={title} />
+        <img loading="lazy" src={image} alt={title} />
       </div>
       <div className="projects-item--text">
         <div>
