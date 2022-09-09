@@ -1,12 +1,10 @@
-import { lazy } from "react";
 import "./App.scss";
+import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
-
-const About = lazy(() => import("./components/About/About"));
-const Projects = lazy(() => import("./components/Projects/Projects"));
-const Contact = lazy(() => import("./components/Contact/Contact"));
-const Footer = lazy(() => import("./components/Footer/Footer"));
+import Projects from "./components/Projects/Projects";
 
 const App = () => {
   return (
