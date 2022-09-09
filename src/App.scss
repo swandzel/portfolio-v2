@@ -2,25 +2,33 @@
 
 @font-face {
   font-family: "Oswald Bold";
-  src: url("../src/assets/fonts/Oswald-Bold.ttf") format("truetype");
+  src: url("../src/assets/fonts/Oswald-Bold.woff2") format("woff2"),
+    url("../src/assets/fonts/Oswald-Bold.woff") format("woff"),
+    url("../src/assets/fonts/Oswald-Bold.ttf") format("truetype");
   font-display: block;
 }
 
 @font-face {
   font-family: "Oswald Regular";
-  src: url("../src/assets/fonts/Oswald-Regular.ttf") format("truetype");
+  src: url("../src/assets/fonts/Oswald-Regular.woff2") format("woff2"),
+    url("../src/assets/fonts/Oswald-Regular.woff") format("woff"),
+    url("../src/assets/fonts/Oswald-Regular.ttf") format("truetype");
   font-display: block;
 }
 
 @font-face {
   font-family: "Roboto Regular";
-  src: url("../src/assets/fonts/Roboto-Regular.ttf") format("truetype");
+  src: url("../src/assets/fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../src/assets/fonts/Roboto-Regular.woff") format("woff"),
+    url("../src/assets/fonts/Roboto-Regular.ttf") format("truetype");
   font-display: block;
 }
 
 @font-face {
   font-family: "Roboto Bold";
-  src: url("../src/assets/fonts/Roboto-Bold.ttf") format("truetype");
+  src: url("../src/assets/fonts/Roboto-Bold.woff2") format("woff2"),
+    url("../src/assets/fonts/Roboto-Bold.woff") format("woff"),
+    url("../src/assets/fonts/Roboto-Bold.ttf") format("truetype");
   font-display: block;
 }
 
