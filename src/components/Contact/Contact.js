@@ -27,6 +27,7 @@ const Contact = () => {
           subtitleColor="#C4C4C4"
         />
         <motion.img
+          loading="lazy"
           src={MessageLeftIcon}
           alt="Icon #1"
           className="contact--icons left"
@@ -35,6 +36,7 @@ const Contact = () => {
           }}
         />
         <motion.img
+          loading="lazy"
           src={MessageRightIcon}
           alt="Icon #2"
           className="contact--icons right"

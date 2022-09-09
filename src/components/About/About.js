@@ -33,7 +33,11 @@ const About = () => {
                 className="about--left--technologies-item"
                 key={technology.id}
               >
-                <img src={technology.icon} alt={technology.name} />
+                <img
+                  loading="lazy"
+                  src={technology.icon}
+                  alt={technology.name}
+                />
                 <div className="tooltip">{technology.name}</div>
               </div>
             ))}
