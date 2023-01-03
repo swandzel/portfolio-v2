@@ -7,7 +7,7 @@ export const projects = [
     id: 1,
     title: "Wine Pairing App & API",
     about:
-      "Wine Pairing App helps people choose the right wine for their meal. This is version 2.0 where I added my own API built with Node/Express and MongoDB. Types of food available in the database: pizza, pork, lamb, beef, burger, chicken, white fish, salad, cake. The first request may take up to 10 seconds because the API is hosted on free Heroku.",
+      "Wine Pairing App helps people choose the right wine for their meal. This is version 2.2 where I added my own API built with Node/Express and MongoDB. Types of food available in the database: pizza, pork, lamb, beef, burger, chicken, white fish, salad, cake. First request may take up to 10 seconds because the API is hosted on free Render.",
     technologies: "React, CSS, Express, MongoDB",
     image: WinePairing,
     code: "https://github.com/swandzel/wine-pairing-app/",

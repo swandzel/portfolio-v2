@@ -58,8 +58,8 @@ const About = () => {
           <div className="about--right--about">
             <p>My name is Sebastian Wandzel and I am a front-end developer.</p>
             <p>
-              I focus mainly on building modern, responsive websites and
-              API-based applications.
+              I focus mainly on building modern websites and API-based
+              applications.
             </p>
             <p>
               I have experience working with clients from various countries and
