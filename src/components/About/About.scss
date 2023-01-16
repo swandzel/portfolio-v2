@@ -141,18 +141,18 @@
         align-self: center;
       }
 
-      a {
-        margin-right: 40px;
-      }
+      // a {
+      //   margin-right: 40px;
+      // }
 
       img {
         cursor: pointer;
         height: 110px;
         width: 110px;
 
-        &:last-of-type {
-          margin-right: 0;
-        }
+        // &:last-of-type {
+        //   margin-right: 0;
+        // }
       }
     }
   }

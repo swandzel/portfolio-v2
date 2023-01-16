@@ -21,14 +21,14 @@ const Modal = ({ setShowModal, toggleModal }) => {
           X
         </div>
         Here is my CV
-        <a
+        {/* <a
           href={require("../../assets/CV_Sebastian_Wandzel.pdf")}
           download="CV_Sebastian_Wandzel"
           className="button"
           style={{ backgroundColor: "#dd7dff", width: "294px" }}
         >
           Download
-        </a>
+        </a> */}
       </div>
     </div>
   );

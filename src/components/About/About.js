@@ -1,21 +1,21 @@
 import "./About.scss";
 import AboutIcon from "../../assets/icons/icon-about.svg";
-import ResumeIcon from "../../assets/icons/icon-resume.svg";
+// import ResumeIcon from "../../assets/icons/icon-resume.svg";
 import GitHubIcon from "../../assets/icons/icon-github.svg";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import { technologies } from "../../variables/technologies";
 import useParallax from "../../variables/useParallax";
 import { motion } from "framer-motion";
-import Modal from "../Modal/Modal";
-import { useState } from "react";
+// import Modal from "../Modal/Modal";
+// import { useState } from "react";
 
 const About = () => {
-  const [showModal, setShowModal] = useState(false);
+  // const [showModal, setShowModal] = useState(false);
   const { ref, aboutToRight, technologiesScale } = useParallax();
 
-  const toggleModal = () => {
-    setShowModal(!showModal);
-  };
+  // const toggleModal = () => {
+  //   setShowModal(!showModal);
+  // };
 
   return (
     <section className="about" id="about" ref={ref}>
@@ -74,17 +74,17 @@ const About = () => {
             >
               <img src={GitHubIcon} alt="Check my GitHub" />
             </a>
-            <img
+            {/* <img
               src={ResumeIcon}
               alt="Download my resume"
               onClick={toggleModal}
-            />
+            /> */}
           </div>
         </motion.div>
       </div>
-      {showModal && (
+      {/* {showModal && (
         <Modal toggleModal={toggleModal} setShowModal={setShowModal} />
-      )}
+      )} */}
     </section>
   );
 };
